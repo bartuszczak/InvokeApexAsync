@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <masterLabel>InvokeApexAsync</masterLabel>
+    <description>Invokes a specified invokable method asynchronously while blocking the screen</description>
+    <isExposed>true</isExposed>
+<targets>
+    <target>lightning__FlowScreen</target>
+</targets>
+<targetConfigs>
+    <targetConfig targets="lightning__FlowScreen">
+        <property name="classToInvoke" label="Invokable Apex class name" description="Apex class name containing invokable method" type="String" role="inputOnly" required="true" />
+        <property name="waitingText" label="Text to show while waiting" description="Text to show while waiting" type="String" role="inputOnly" />
+        <property name="inputParamKeys" type="String[]" label="Input Param Keys" role="inputOnly" description="Input Param Keys" />
+        <property name="inputParamValues" type="String[]" label="Input Param Values" role="inputOnly" description="Input Param Values" />
+        <property name="outputParams" type="String[]" label="Output Paramas" role="outputOnly" description="Output Params" />
+    </targetConfig>
+</targetConfigs>
+
+</LightningComponentBundle>
